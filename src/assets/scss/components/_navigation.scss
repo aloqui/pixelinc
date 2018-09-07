@@ -1,0 +1,17 @@
+.navigation-block {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    background-color: rgba($white, 0);
+    .navigation-inner {
+        li {
+            a {
+                font-family: 'Montserrat', sans-serif;
+                opacity: .9;
+                font-size: 16px;
+                color: $white;
+                font-weight: 500;
+            }
+        }
+    }
+}

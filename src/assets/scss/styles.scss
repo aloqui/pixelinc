@@ -1,0 +1,22 @@
+@import "utilities/variables";
+@import "utilities/utilities";
+
+
+
+@import "components/header";
+@import "components/banner";
+@import "components/footer";
+@import "components/modal";
+@import "components/navigation";
+
+@import "page/index";
+@import "page/about-us";
+
+@import "base/reset";
+.test {
+  background-color: rgb(43, 188, 193);
+}
+
+.test-2 {
+  background-color: #3e52c5;
+}

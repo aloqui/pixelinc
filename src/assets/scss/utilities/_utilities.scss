@@ -1,0 +1,198 @@
+.font--extra-bold {
+  font-weight: $font-extra-bold !important;
+}
+.font--bold {
+  font-weight: $font-bold !important;
+}
+
+.font--semi-bold {
+  font-weight: $font-semi-bold !important;
+}
+
+.font--normal {
+  font-weight: $font-normal !important;
+}
+
+.font--semi-light {
+  font-weight: $font-semi-light !important;
+}
+
+.font--light {
+  font-weight: $font-light !important;
+}
+
+.height--full {
+  min-height: 100vh;
+}
+
+.height--quarter {
+  min-height: 75vh;
+}
+
+.height--half {
+  min-height: 50vh;
+}
+
+.height--half-ng-half {
+  min-height: 30vh;
+}
+
+.hover--no-underline {
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.highlight--primary {
+  color: $primary-color; // background-color: $white--main;
+}
+
+.highlight--secondary {
+  color: $secondary-color;
+}
+
+.highlight--secondary--light {
+  color: $secondary-color--light;
+  font-weight: $font-semi-bold;
+}
+
+.utility__button {
+  font-family: 'Roboto', sans-serif !important;
+  padding: 12px 24px;
+  background-color: transparent;
+  color: $white--main;
+  border-radius: 10px;
+  border: 2px solid $white--main;
+  font-size: 14px !important;
+  letter-spacing: 1px; // transform: translateY(80px);
+  transition: .16s ease-out;
+  &:hover {
+    background-color: $white--main;
+    color: $primary-color;
+    border-radius: 3px;
+  }
+}
+
+.utility__button--inverted {
+  @extend .utility__button;
+  background-color: transparent;
+  color: $primary-color;
+  &:hover {
+    background-color: $white;
+    color: $primary-color--light !important;
+  }
+}
+
+.utility__button--primary-inverted {
+  @extend .utility__button;
+  border: 0 solid transparent;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid darken($white, 10%);
+  background-color: $white--main; // background: #ffe259;
+  // /* fallback for old browsers */
+  // background: -webkit-linear-gradient(to right, #ffa751, #ffe259);
+  // /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, #ffa751, #ffe259);
+  // /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #396afc;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #29ffe2, #0ea2cf);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #f6f6f6, #eef7fa);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: $primary-color--light !important;
+  &:hover {
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid darken($white, 14%);
+    color: $white;
+  }
+}
+
+.utility__link--small {
+  font-size: 13px;
+  padding: 2px 3px 2px 1px;
+  font-family: 'Roboto', sans-serif;
+  @extend .font--semi-bold;
+  @extend .hover--no-underline;
+}
+
+.utility__link--small-dark {
+  color: $black--main; // border-bottom: 1px solid rgba($black--main, .6);
+  &:hover {
+    color: $secondary-color;
+    border-bottom: 1px solid $secondary-color;
+  }
+}
+
+.utility__box-shadow {
+  -webkit-box-shadow: 0px 1px 17px -5px rgba(0, 0, 0, 0.20);
+  -moz-box-shadow: 0px 1px 17px -5px rgba(0, 0, 0, 0.20);
+  box-shadow: 0px 1px 17px -5px rgba(0, 0, 0, 0.20);
+}
+
+.utility__box-shadow--small {
+  -webkit-box-shadow: 0px 1px 17px -5px rgba(0, 6px, 0, 0.04);
+  -moz-box-shadow: 0px 1px 17px -5px rgba(0, 6px, 0, 0.04);
+  box-shadow: 0px 1px 17px -5px rgba(0, 6px, 0, 0.04);
+}
+
+.animate--build {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 1.9s cubic-bezier(.4, .2, 0, 1);
+}
+
+.animate--fade-in {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: .8s cubic-bezier(.4, .2, 0, 1);
+}
+
+.content {
+  max-width: 800px;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+.type__label {
+  background-color: $black--main;
+  border-radius: 2px;
+  font-size: 11px !important;
+  letter-spacing: 2px !important;
+  padding: 1px 0;
+}
+
+.type__label--international {
+  background-color: $primary-color--light;
+  color: $white--main !important;
+}
+
+.type__label--local {
+  background-color: $secondary-color;
+  color: $white--main !important;
+}
+
+.burger-icon {
+  cursor: pointer;
+  i {
+    font-size: 34px;
+    color: $primary-color;
+    transition: .4s cubic-bezier(.4, .2, 0, 1);
+    &:hover {
+      border-radius: 4px;
+      -webkit-box-shadow: 0px 0px 5px 0px rgba($primary-color--light, .75);
+      -moz-box-shadow: 0px 0px 5px 0px rgba($primary-color--light, .75);
+      box-shadow: 0px 0px 5px 0px rgba($primary-color--light, .75);
+    }
+  }
+}
+
+.image-placeholder {
+  background-color: rgba(149, 99, 5, 0.02);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+}

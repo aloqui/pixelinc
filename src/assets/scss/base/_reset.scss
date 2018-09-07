@@ -1,0 +1,303 @@
+* {
+  // margin: 0 !optional;
+  // padding: 0 !optional;
+}
+
+::-webkit-scrollbar {
+  /* 1 */
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-button {
+  /* 2 */
+}
+
+::-webkit-scrollbar-track {
+  background-color: darken($white--main, 0%);
+}
+
+::-webkit-scrollbar-track-piece {
+  /* 4 */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(lighten($black, 12%), .8); // background-color: $primary-color--light;
+  /* 5 */
+}
+
+::-webkit-scrollbar-corner {
+  /* 6 */
+}
+
+::-webkit-resizer {
+  /* 7 */
+}
+
+img {
+  height: inherit;
+  max-height: 70%;
+}
+
+body {
+  background-color: $white;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+h6 {
+  margin: 0;
+}
+
+ol {
+  border-left: 6px solid darken($white--main, .5%);
+  padding-left: 34px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  letter-spacing: -.0005em !important;
+  
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  &.light-heading {
+    color: #882700 !important;
+  }
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 43px;
+}
+
+h4 {
+  line-height: 34px;
+}
+
+h5 {
+  line-height: 30px;
+}
+
+h6 {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.about-the-company-block {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $primary-color;
+  }
+}
+
+p {
+  // opacity: 0;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  &.small {
+    opacity: .7;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+  }
+  &.sub-heading {
+    color: #f0f0f0;
+    font-size: 22px;
+    line-height: 33px;
+    font-weight: 300;
+  }
+  &.light-heading {
+    color: #b15e3d !important;
+  }
+}
+
+.slick-slide {
+  cursor: pointer;
+}
+
+.slick-center {
+  position: relative;
+  transition: .2s ease-in-out;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($primary-color--light, .8);
+    transition: .2s ease-in-out;
+  }
+  &:hover {
+    &::before {
+      background-color: transparent;
+    }
+    .carousel__caption {
+      opacity: 0;
+    }
+  }
+  .carousel__caption {
+    opacity: 1;
+  }
+}
+
+.carousel__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30%;
+  color: $white--main !important;
+  opacity: 0;
+}
+
+@media (min-width: 992px) {
+  .banner-block {
+    .banner-inner {
+      min-height: 750px;
+    }
+    .height--quarter {
+      min-height: 750px;
+      height: 75vh;
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .banner-block {
+    .banner-inner {
+      background-position: center;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .gallery {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  a {
+    width: 100%;
+  }
+  .text-center,
+  .text-right {
+    text-align: left !important;
+  }
+  a.text-center {
+    text-align: center !important;
+  }
+  .banner-block {
+    .banner-inner {
+      .banner__greetings {
+        padding-left: 0;
+        min-height: 100vh;
+        h1 {
+          overflow: visible;
+        }
+        .banner__links {
+          width: 100%;
+        }
+        .text-center {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+  .contact-us-block {
+    .contact-us-inner {
+      .contact-us-company-block {
+        // background-color: transparent;
+        img {
+          width: 60%;
+          padding-top: 5% !important;
+          padding-bottom: 5% !important;
+          &.company__precision-surveying {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 565px) {
+  .banner-inner {
+    background-position: bottom left !important;
+  }
+  a.text-center {
+    text-align: center !important;
+  }
+  .m-5 {
+    margin: 8% 0 !important;
+  }
+  .mx-3,
+  .mx-4 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .banner__greetings {
+    max-width: 100vw !important;
+  }
+}
+
+@media (max-width: 415px) {
+  .contact-us-block {
+    .contact-us-inner {
+      .contact-us-company-block {
+        img {
+          width: 80%;
+          padding-top: 10% !important;
+          padding-bottom: 10% !important;
+          &.company__precision-surveying {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+  .animate--build {
+    height: 100%;
+  }
+  .banner-block {
+    padding-top: 0 !important;
+    .banner-inner {
+      min-height: 90vh;
+    }
+  }
+}
+
+.carousel {
+  div {
+    max-height: 300px;
+  }
+  img {
+    width: 100%;
+  }
+}
